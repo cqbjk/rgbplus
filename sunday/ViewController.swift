@@ -31,7 +31,9 @@ class ViewController: UIViewController {
         
         setDefaultColor()
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,8 +49,15 @@ class ViewController: UIViewController {
         let opacity = CGFloat(opacitySlider.value)
         
         squareView.backgroundColor = UIColor(red: red, green:green, blue:blue, alpha: opacity)
+        let defaults = NSUserDefaults.standardUserDefaults()  //1
+        defaults.setFloat(redSlider.value, forKey: "red")   //2
+        defaults.setFloat(greenSlider.value, forKey: "green")
+        defaults.setFloat(blueSlider.value, forKey: "blue")
+        defaults.synchronize()    //3
     
     }
+    
+    
     
     @IBAction func setRed(sender: AnyObject) {
         currentColor = .Red
@@ -87,6 +96,18 @@ class ViewController: UIViewController {
         updateColor()
     }
     
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "openColor") {
+            let newViewController = segue.destinationViewController as! UIViewController
+            newViewController.view.backgroundColor = squareView.backgroundColor
+        }
+    }
+
+
+
+
 }
 
 enum CurrentColor{
