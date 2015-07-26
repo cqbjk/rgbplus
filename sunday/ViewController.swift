@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenButton: UIButton!
     @IBOutlet var blueButton: UIButton!
     @IBOutlet var rotateButton: UIButton!
+    @IBOutlet var rotateSlider: UISlider!
     
     var currentColor: CurrentColor = .Red
 
@@ -29,7 +30,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
         setDefaultColor()
+        
+        
     }
     
     
@@ -49,13 +53,10 @@ class ViewController: UIViewController {
         let opacity = CGFloat(opacitySlider.value)
         
         squareView.backgroundColor = UIColor(red: red, green:green, blue:blue, alpha: opacity)
-        let defaults = NSUserDefaults.standardUserDefaults()  //1
-        defaults.setFloat(redSlider.value, forKey: "red")   //2
-        defaults.setFloat(greenSlider.value, forKey: "green")
-        defaults.setFloat(blueSlider.value, forKey: "blue")
-        defaults.synchronize()    //3
+        
     
     }
+    
     
     
     
@@ -72,7 +73,12 @@ class ViewController: UIViewController {
         setDefaultColor()
     }
     
-    @IBAction func rotateImage(sender: UIButton) {
+    
+    @IBaction func UpdateDegrees(sender:UISlider){
+        let currentDegrees = CGFloat(rotateSlider.value)
+    }
+    
+    @IBAction func rotateImage(sender: UISlider) {
         UIView.animateWithDuration(2.0, animations: {
             self.squareView.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
         })
