@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet var rotateButton: UIButton!
     @IBOutlet var rotateSlider: UISlider!
     
+    
     var currentColor: CurrentColor = .Red
 
     // could do CurrentColor.Red
@@ -30,9 +31,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let defaults = NSUserDefaults.standardUserDefaults()  //1
+        redSlider.value = defaults.floatForKey("red")
+        greenSlider.value = defaults.floatForKey("green")
+        blueSlider.value = defaults.floatForKey("blue")
+        opacitySlider.value = defaults.floatForKey("opacity")
         
-        setDefaultColor()
-        
+        updateColor()
         
     }
     
@@ -54,6 +59,12 @@ class ViewController: UIViewController {
         
         squareView.backgroundColor = UIColor(red: red, green:green, blue:blue, alpha: opacity)
         
+        let defaults = NSUserDefaults.standardUserDefaults()  //1
+        defaults.setFloat(redSlider.value, forKey: "red")   //2
+        defaults.setFloat(greenSlider.value, forKey: "green")
+        defaults.setFloat(blueSlider.value, forKey: "blue")
+        defaults.setFloat(opacitySlider.value, forKey: "opacity")
+        defaults.synchronize()    //3
     
     }
     
@@ -73,16 +84,37 @@ class ViewController: UIViewController {
         setDefaultColor()
     }
     
-    
+    /*
     @IBaction func UpdateDegrees(sender:UISlider){
         let currentDegrees = CGFloat(rotateSlider.value)
     }
+*/
     
     @IBAction func rotateImage(sender: UISlider) {
-        UIView.animateWithDuration(2.0, animations: {
+        let radians = atan2( squareView.transform.b, squareView.transform.a)
+        let degrees = radians * (180 / CGFloat(M_PI) )
+        
+        UIView.animateWithDuration(0.0, animations: {
             self.squareView.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
+
         })
     }
+    
+    
+    
+    
+    
+    @IBAction func rotate(sender: AnyObject){
+        let rotation = CGFloat(rotateSlider.value)
+        
+        UIView.animateWithDuration(0.0, animations: {
+            self.squareView.transform = CGAffineTransformMakeRotation((rotation * CGFloat(M_PI)) / 180 )
+        })
+    }
+    
+    
+    
+    
     
     func setDefaultColor(){
         switch currentColor{

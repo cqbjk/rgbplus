@@ -29,7 +29,7 @@
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zde-OF-BR8">
-                                <rect key="frame" x="61" y="393" width="267" height="31"/>
+                                <rect key="frame" x="58" y="380" width="267" height="31"/>
                                 <color key="tintColor" red="0.078031466760000001" green="1" blue="0.26013315120000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.078031466760000001" green="1" blue="0.26013315120000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -37,14 +37,14 @@
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Awb-fw-J4k">
-                                <rect key="frame" x="58" y="468" width="272" height="31"/>
+                                <rect key="frame" x="58" y="432" width="272" height="31"/>
                                 <color key="thumbTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="updateColor" destination="BYZ-38-t0r" eventType="valueChanged" id="Q7w-WP-ccD"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rZt-Cy-dIc">
-                                <rect key="frame" x="58" y="538" width="272" height="31"/>
+                                <rect key="frame" x="58" y="484" width="272" height="31"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="thumbTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -52,7 +52,7 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77C-UM-zq1">
-                                <rect key="frame" x="141" y="675.5" width="29" height="28.5"/>
+                                <rect key="frame" x="60" y="621.5" width="58" height="26.5"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.24368123310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="R">
                                     <color key="titleColor" red="1" green="0.0" blue="0.24368123310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBi-47-9YZ">
-                                <rect key="frame" x="178" y="674.5" width="30" height="29.5"/>
+                                <rect key="frame" x="60" y="699" width="58" height="24.5"/>
                                 <color key="backgroundColor" red="0.1199243255" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="G">
                                     <color key="titleColor" red="0.1199243255" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akb-Sw-2P4">
-                                <rect key="frame" x="216" y="674.5" width="30" height="28.5"/>
+                                <rect key="frame" x="60" y="660" width="58" height="27"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,51 +83,41 @@
                                     <action selector="setBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4aQ-Yy-yrC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uW-F7-zWF">
-                                <rect key="frame" x="257" y="674" width="46" height="30"/>
-                                <state key="normal" title="Strong">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="si7-kE-V60">
-                                <rect key="frame" x="95" y="675" width="38" height="30"/>
-                                <state key="normal" title="Weak">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="fyC-OZ-vwj">
+                                <rect key="frame" x="58" y="527" width="272" height="31"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.41510257755134716" green="0.21769940241684696" blue="0.99250315656565657" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="setBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nz4-cr-6gL"/>
+                                    <action selector="rotate:" destination="BYZ-38-t0r" eventType="valueChanged" id="nvx-sw-SmH"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4st-Ce-31K">
-                                <rect key="frame" x="150" y="637" width="46" height="30"/>
-                                <state key="normal" title="Rotate">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.24368123310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rotateImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RKW-5g-iHt"/>
-                                    <action selector="setRed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sce-aN-RF1"/>
-                                </connections>
-                            </button>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Presets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUx-dT-Dmr">
+                                <rect key="frame" x="60" y="593" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Palette" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy3-Zy-UMl">
+                                <rect key="frame" x="153" y="592" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veM-aT-H0U">
-                                <rect key="frame" x="208" y="636" width="38" height="30"/>
-                                <state key="normal" title="Open">
+                                <rect key="frame" x="119" y="282" width="154" height="30"/>
+                                <state key="normal" title="Status: Accept/Reject">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="9cQ-53-EJ7" kind="show" identifier="openColor" id="nKW-uj-Q3S"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="fyC-OZ-vwj">
-                                <rect key="frame" x="58" y="598" width="272" height="31"/>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="thumbTintColor" red="0.41510257755134716" green="0.21769940241684696" blue="0.99250315656565657" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="rotateImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="u5G-Ce-rIs"/>
-                                    <action selector="updateColor" destination="BYZ-38-t0r" eventType="valueChanged" id="fPh-k3-Mqy"/>
-                                </connections>
-                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHD-Yp-EUJ">
+                                <rect key="frame" x="248" y="593" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -141,8 +131,7 @@
                         <outlet property="opacitySlider" destination="rZt-Cy-dIc" id="LeS-HB-hYB"/>
                         <outlet property="redButton" destination="77C-UM-zq1" id="itb-sm-WXX"/>
                         <outlet property="redSlider" destination="Qn9-zL-WLd" id="vUH-pd-z8H"/>
-                        <outlet property="rotateButton" destination="4st-Ce-31K" id="xEH-nQ-XwX"/>
-                        <outlet property="rotateSlider" destination="fyC-OZ-vwj" id="ygJ-Lb-Eb8"/>
+                        <outlet property="rotateSlider" destination="fyC-OZ-vwj" id="OTJ-Ja-1w6"/>
                         <outlet property="squareView" destination="hmb-zM-rHY" id="wQG-oN-kYJ"/>
                     </connections>
                 </viewController>
@@ -161,7 +150,18 @@
                     <view key="view" contentMode="scaleToFill" id="4En-jH-Tka">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rmk-vK-2Pw">
+                                <rect key="frame" x="142" y="95" width="131" height="29"/>
+                                <segments>
+                                    <segment title="Approve"/>
+                                    <segment title="Reject"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gw3-Bv-2HF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
